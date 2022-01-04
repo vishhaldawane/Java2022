@@ -15,14 +15,89 @@ class Bird { }
 public class Main {
 
     public static void main(String[] args) {
-        Bird bird = new Bird();
-        Person person1 = new Person('F',22,"Radha");
-        Person person2 = new Person('M',23,"Shyam");
-        Person person3 = new Person('F',20,"Meera");
+/*
 
+         -------
+       2 |179|
+        --------
+          89| 1
+          -------
+          44|1
+          ------
+          22|0
+          ------
+          11|0
+          ------
+          5|1
+          -----
+          4|1
+          ----
+          2|0
+          -----
+          1
+
+          1     0    1      1       0       0       1       1
+        2^6    2^6   2^5   2^4      2^3    2^2     2^1     2^0
+        128     64   32      16      8      4       2        1
+        |            |       |                      |        |
+
+
+
+
+ 0          000
+ 1          001
+ 2          010
+ 3          011
+ 4          100
+ 5          101
+ 6          110
+ 7          111
+
+ 8
+ 9
+ 10
+
+
+
+
+ */
+
+
+       //int num1 = 179; // 1     0    1      1       0       0       1       1
+       //int num2 = 7; //   0     0    0      0       0       1       1       1
+        //--------------------
+        //                0     0    0      0       0       0       1       1
+
+       // int num3 = num1 & num2;  // single & is the bitwise opeartor
+
+        //&& is the logical AND operator
+       // int age=20;
+        //true = 1   false = 0
+
+        //if( age >=1 & age<=120) //  1 & 1
+
+        //married, certified, employed
+        //  1       1           1       = 7
+        //  1       1           0       = 6
+        //  1       0           1       = 5
+        //  1       0           0       = 4
+        //  0       1           1       = 3
+        //  0       1           0       = 2
+        //  0       0           1       = 1
+
+
+        int num=179;
+        int status = 7; // 111
+
+        System.out.println("num    : "+Integer.toBinaryString(num));
+        System.out.println("status : "+Integer.toBinaryString(status));
+
+
+
+        Person person1 = new Person(12);
         person1.showPerson();
-        person2.showPerson();
-        person3.showPerson();
+
+
 
         // person.setPerson('F',22,"Julie"); //via the function we can control valid values
         //person.showPerson();
