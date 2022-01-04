@@ -1,49 +1,31 @@
 package com.company;
+/*
+        A constructor is a special function that has the same name as of the enclosing class
+         a constructor is called during object creation process
+         IT DOES NOT HAVE RETURN TYPE
+         BUT IT CAN TAKE PARAMETERS
 
-class Person
-{
-    private char gender;
-    private int age;
-    private String name;
+         it is used to initialize the object data
 
-    void setPerson(char gender, int age, String name) {
-        if(gender=='M' || gender=='F')
-            this.gender = gender;
-        else {
-            RuntimeException rte = new RuntimeException("Invalid gender");
-            throw rte;
-        }
 
-        if(age >= 1 && age <= 120) {
-            this.age = age;
-        }
-        else {
-            RuntimeException rte = new RuntimeException("Invalid age");
-            throw rte;
-        }
 
-        if(name.matches("^[a-zA-Z]*$")) {
-            this.name = name;
-        }
-        else {
-            RuntimeException rte = new RuntimeException("Invalid name");
-            throw rte;
-        }
+ */
 
-    }
-    void showPerson() {
-        System.out.println("GENDER : "+gender);
-        System.out.println("AGE    : "+age);
-        System.out.println("NAME   : "+name);
-    }
-}
-
+class Bird { }
 public class Main {
 
     public static void main(String[] args) {
-        Person person = new Person();
-        person.setPerson('F',22,"Julie"); //via the function we can control valid values
-        person.showPerson();
+        Bird bird = new Bird();
+        Person person1 = new Person('F',22,"Radha");
+        Person person2 = new Person('M',23,"Shyam");
+        Person person3 = new Person('F',20,"Meera");
+
+        person1.showPerson();
+        person2.showPerson();
+        person3.showPerson();
+
+        // person.setPerson('F',22,"Julie"); //via the function we can control valid values
+        //person.showPerson();
         //person.gender='X';
         //person.age=200;
         //person.name="@#$@#$";
